@@ -35,11 +35,12 @@ button {
   top: 50%;
   left: 50%;
   transform-origin: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -300px);
   pointer-events: none;
   opacity: 0%;
   text-align: center;
 }
+
 .popup-modal p {
   margin-bottom: 24px
 }
@@ -55,6 +56,10 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  transform: translate(-50%, -50%);
 }
 
 .backdrop.show {
